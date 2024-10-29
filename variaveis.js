@@ -30,6 +30,15 @@ let nomeUsuario = prompt('Qual seu nome?');
 
 // ATIVIDADE
 // leia o nome do usário (PROMPT)
+let nome = prompt('Qual seu nome?');
 // leia a idade do usário (PROMPT)
+let idade = prompt('Qual sua idade?');
 // mostre o nome em um alerta
+alert(nome);
+alert('O nome do usuário é ' + nome);
 // altere a idade do usuario e mostre no console
+console.log(idade)
+idade = 30
+console.log('A idade do usário agora é ' + idade)
+
+
