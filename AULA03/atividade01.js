@@ -3,6 +3,7 @@
 let num = 1
 //início do loop
 let numeroUsuario = Number(prompt('digite um número'))
+// 6
 //condição final do loop
 
 while (num <= numeroUsuario) {
@@ -10,5 +11,6 @@ while (num <= numeroUsuario) {
     if (num % 2 == 0) {
         console.log(num)
     }
-    num++
+    num++   
+    
 }

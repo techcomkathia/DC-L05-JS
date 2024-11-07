@@ -2,11 +2,27 @@
 let saldo = 1000
 let divida = false
 let emprestimo = 0
+let senha = '2024digital'
 
+// verifique se o usuário digitou a senha correta antes de mostrar as opções
+// enquanto a senha não estiver correta, solicitar a senha ao usuário
+alert('Bem vindo ao simulador de conta')
+let senhaDigitada = prompt('digite sua senha')
 
+// operadores de comparação
+// == igual
+// != diferente
+// > maior que
+// < menor que
+// >= maior ou igual
+// <= menor ou igual
+// retorna true ou false
+
+while(senha != senhaDigitada){
+    alert('Senha inválida. Tente novamente')
+    senhaDigitada = prompt('digite sua senha')
+}
 let escolha =  Number(prompt('Escolha uma operação: \n (1) saque \n (2) depósito \n (3) empréstimo \n (4) extrato'))
-// numero - para numero ( 0 até infinito)
-// string - para NUMERO (NaN)
 
 switch (escolha) {
     case 1:
@@ -48,17 +64,3 @@ switch (escolha) {
         break;
 } 
 
-
-
-//  A aplicação deve ter as seguintes funcionalidades: 
-//  saque (1)
-//       vai subtrair o valor do saque do saldo
-//  depósito (2)
-//       vai adicionar o valor  ao saldo
-//  empréstimo (3)
-//       trocar o booleano da divida, caso seja FALSE, o usuario vai poder realizar o empréstimo. Será adicionadoo valor do empréstimo ao saldo e colocado como negativo no emprestimo
-//  extrato (4)
-//       mostrar o saldo e as dividas da conta
-
-
-// Use uma estrutura switch case para controlar o menu de operações e implemente a lógica de cada função conforme ação do usuário
