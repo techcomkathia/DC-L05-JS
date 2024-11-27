@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tarefas</title>
+</head>
+<body>
+
+    <h1>Lista de Tarefas</h1>
+
+    <ol id="listaTarefas">
+        
+    </ol>
+
+    <!-- escreva um script que adicione itens na lista -->
+    <!-- os itens devem ser inseridos pelo usuário -->
+    <!-- será perguntado ao usuario quantas tarefas ele deseja -->
+    <!-- após isso serão adicionados na lista  fazendo a manipulação do DOM para o elemento com tag ul -->
+
+    <!-- innerHTML --- insere texto e tags html -->
+    <!-- innerText --- insere apenas o texto -->
+
+    <script>
+        // 1. criar um array vazio
+        let tarefas = []
+        //2. Pedir a quantidade de tarefas ao usuario
+        let qtdTarefas = parseInt(prompt('Quantas tarefas deseja adicionar?'))
+
+        //3. Executar o lopp for para adicionar cada uma das tarefas ao array
+        for( let i=0; i<qtdTarefas; i++){
+            let tarefa = prompt(`Digite a ${i+1}ª tarefa que deseja adicionar a lista`)
+            tarefas.push(tarefa)
+        }
+        
+        // 4. selecionar o elemento ol com o método mais adequado do document
+        let olElement = document.getElementById('listaTarefas') // caso tenha adicionado um id
+        olElement = document.getElementsByTagName('ol')[0] // selecição pela tag 
+        //ambos os métodos retornam um htmlCollection que pode ser utilizado como array
+
+        // 5. adicionar dentro do html do ol os itens(li), onde cada atividade do array será um li
+
+        //+= utiliza o valor anterior e adiciona o que está após a igualdade
+        // 'string' + 'string' = 'stringstring'
+
+        // innerHTML ------ retorna o html interno da tag
+        // elemento.innerHTML += 'texto a ser concatenado'
+
+    </script>
+
+    
+</body>
+</html>

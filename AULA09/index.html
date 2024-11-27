@@ -9,7 +9,7 @@
 
     <h1>Aprendendo sobre o DOM</h1>
 
-    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta accusantium repellendus atque facilis quod, laborum eligendi non, autem provident dolor tempore libero aliquam sapiente similique velit placeat numquam veniam facere! Nisi, hic? Ipsam ipsa excepturi nostrum aut omnis odio iure illum nobis ab magnam, a, amet dolor inventore. Delectus, voluptas!</p>
+    <p class="destaque">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Soluta accusantium repellendus atque facilis quod, laborum eligendi non, autem provident dolor tempore libero aliquam sapiente similique velit placeat numquam veniam facere! Nisi, hic? Ipsam ipsa excepturi nostrum aut omnis odio iure illum nobis ab magnam, a, amet dolor inventore. Delectus, voluptas!</p>
 
     <h2>Listas Ordenadas</h2>
 
@@ -20,7 +20,8 @@
         <li>Item 4</li>
     </ol>
 
-    <h2>Listas Nao Ordenadas</h2>
+    <h2>Listas Nao Ordenadas</h2> 
+    <!-- somente texto - innerHTML e innerText produzem o mesmo resultado -->
 
     <ul>
         <li>Item sem ordem 1</li>
@@ -28,6 +29,9 @@
         <li>Item sem ordem 3</li>
         <li>Item sem ordem 4</li>
     </ul>
+    <!-- dentro da ul existem li o innerHTML e innerText produzem resultados diferentes -->
+    <!-- innerText - retorna o texto interno da tag (não inclui as tags caso existam) -->
+    <!-- innerHTML - retorna o html interno da tag (traz toda a tag e seus conteúdos, caso existam) -->
 
     <div>
         <h3>Divisão sem conteúdo</h3>
@@ -37,5 +41,25 @@
         <h3>Divisão com conteúdo</h3>
         <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis a accusamus autem minus voluptas architecto illo consequatur numquam eligendi odio? Reprehenderit, accusamus illo. Tempore nihil cumque facere ducimus rem! Amet deleniti voluptatum ipsum optio excepturi autem minima vitae quaerat mollitia voluptatibus eos fuga et error, maiores perferendis ullam similique! Quis!</p>
     </div>
+
+    <script src="ATIVIDADE01.js"></script>
+
+
+    <!-- <script>
+        // método para buscar por tag (getElementsByTagName)
+        // retorna um htmlCollection []
+
+        let subTitulos = document.getElementsByTagName('h2') // [h2, h2] ou []
+
+        // busca por classe
+        // retorna um htmlCollection [] para toooodas as tags com a mesma classe
+        let classe = document.getElementsByClassName('destaque') // [p, li, li] ou []
+
+
+        // busca por id
+        // retorna apenas um elemento 
+        let comID =  document.getElementById('divComId') // div
+
+    </script> -->
 </body>
 </html>
