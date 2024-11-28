@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt=br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Query Selector</title>
+</head>
+<body>
+
+    <h1>Query Selector</h1>
+
+    <ul>
+        <li class="destaque">Item 1 ul</li>
+        <li>Item 2 ul</li>
+        <li>Item 3 ul</li>
+    </ul>
+
+    <h2 class="destaque">Subtitulo 1</h2>
+
+    <ol>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <li>Item 3</li>
+    </ol>
+
+    <h2 id="idh2">Subtitulo 2</h2>
+
+    <!-- crie uma lista para as seguintes informações no html -->
+    <!-- nome, idade, função e salario -->
+    <!-- peça ao usuario essas informações e adicione ao html complentando o texto -->
+
+    <ul>
+        <li class="nome">nome:</li>
+        <li>idade:</li>
+        <li id="funcao">função:</li>
+        <li>salario:</li>
+    </ul>
+
+    <!-- <script>
+        let lis = document.getElementsByTagName('li')
+        console.log(lis)
+
+        let lisQuery = document.querySelectorAll('li')
+        // busca todos os elementos pela tag
+        // busca todos os elementos pelo seletor de css li
+        console.log(lisQuery)
+
+        let primeiroLi = document.querySelector('li')
+        // busca o primeiro elemento pela tag
+        // busca o primeiro elemento pelo seletor de css li
+        console.log(primeiroLi)
+
+
+        let elementosClasseDestaque = document.querySelectorAll('.destaque')
+        // busca todos os elementos pela classe
+        console.log(elementosClasseDestaque)
+
+        let elementoEspecial = document.querySelector('#idh2')
+        // busca todos os elementos pelo id
+        console.log(elementoEspecial)
+
+
+    </script> -->
+    
+
+    <script>
+
+        // captar informações do usuario
+        let pessoa = {
+            nome: prompt('Digite seu nome'),
+            idade: prompt('Digite sua idade'),
+            funcao: prompt('Digite sua funcao'),
+            salario: prompt('Digite seu salario')
+        }
+
+
+        // passar as informações para o html
+        // capatar o(s) elementos
+        let lis = document.querySelectorAll('li')
+        // array de itens
+
+        // seleção para o item com classe nome
+        let itemNome= document.querySelector('.nome')
+        itemNome.innerHTML += ` ${pessoa.nome}`
+
+
+        // manipulacao do innterText do li com a idade
+        lis[7].innerHTML += ` ${pessoa.idade}`
+
+
+        // seleção para o item com id funcao
+        let itemFunção = document.querySelector('#funcao')
+        itemFunção.innerHTML += ` ${pessoa.funcao}`
+
+
+        // manipulacao do innterText do li com o salario
+        lis[9].innerHTML += ` ${pessoa.salario}`
+
+    </script>
+</body>
+</html>

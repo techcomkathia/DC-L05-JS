@@ -39,6 +39,13 @@
         //ambos os métodos retornam um htmlCollection que pode ser utilizado como array
 
         // 5. adicionar dentro do html do ol os itens(li), onde cada atividade do array será um li
+        let qtd = tarefas.length
+
+        // loop que vai adicionar conteúdo de html dentro da lista não ordena
+        for(let i=0; i<qtd; i++){
+            olElement.innerHTML += `<li>${tarefas[i]}</li>`
+        }
+
 
         //+= utiliza o valor anterior e adiciona o que está após a igualdade
         // 'string' + 'string' = 'stringstring'
