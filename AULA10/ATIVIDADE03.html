@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Tabela de descontos</h1>
+
+    <p>Para os nossos descontos progressivos veja as informações abaixo</p>
+
+    <div id="descontos">
+
+    </div>
+
+
+    <table id="tabela">
+
+    </table>
+
+    <script>
+        let valorDaCompra = 500; // Valor original da compra
+        let descontoMaximo = 25; // Percentual máximo de desconto
+
+        // Seleciona o elemento onde os descontos serão exibidos
+        let descontoDiv = document.getElementById('descontos');
+
+        for (let percentualDesconto = 1; percentualDesconto <= descontoMaximo; percentualDesconto++) {
+            const valorComDesconto = valorDaCompra - (valorDaCompra * percentualDesconto / 100); // Calcula o valor com desconto
+            descontoDiv.innerHTML += ` <p> R$ ${valorDaCompra} = ${percentualDesconto}% = R$ ${valorComDesconto} </p>`
+            valorDaCompra += 100;
+        }
+
+
+        // represente os elementos em uma tabela (tabela com id tabela)
+    </script>
+</body>
+</html>
