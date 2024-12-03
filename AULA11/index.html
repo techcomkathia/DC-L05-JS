@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Eventos</h1>
+
+    <p id="saudacao"></p>
+
+    <button onclick="ola()">Clique para dar oi</button>
+    <button onclick="apagar()">Apagar conteúdo do parágrafo</button>
+
+    <!-- click = onclick 
+        mudança = onchange
+        mouse em cima do elemento = onmouseover
+        mouse fora do elemento = onmouseout  
+        tecla pressionada = onkeydown
+    -->
+    <br>
+    <img src="filhote.jpg" alt="gatinho filhote">
+
+    <button onclick="crescer()">Clique aqui para o gatinho crescer</button>
+
+    <script>
+        function ola(){
+            // selecionar o elemento do html que será manipulado e adicionar o texto
+            let paragrafo = document.getElementById('saudacao')
+            let p = document.querySelector('#saudacao')
+
+            p.innerHTML = 'Oi, tudo bem?'
+        }
+
+        function apagar(){
+            let paragrafo = document.getElementById('saudacao')
+            paragrafo.innerHTML = ''
+        } 
+        
+        function crescer(){
+            let img = document.querySelector('img')
+            img.src = 'adulto.jpg'
+            img.alt = 'gatinho adulto'
+            img.style.display = 'block'
+            img.style.border = '5px solid red'
+        }
+    </script>
+    
+</body>
+</html>
