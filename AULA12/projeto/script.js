@@ -15,6 +15,7 @@ let escolhaUsuario = document.getElementById('escolhaU')
 // selecionar o resultado
 let resultado = document.getElementById('resultado')
 //--------------------------------------------------------
+// 2 - DEFINIÇÃO DAS REGRAS DO JOGO
 
 const opcoes= {
     1: {
@@ -24,6 +25,18 @@ const opcoes= {
         papel : 'PERDEU',
         tesoura : 'GANHOU'
     },
-    2:{},
-    3:{}
+    2:{
+        nome: 'papel',
+        imagem: 'img/papel.png',
+        pedra : 'GANHOU',
+        papel : 'EMPATE',
+        tesoura : 'PERDEU'
+    },
+    3:{
+        nome: 'tesoura',
+        imagem: 'img/tesoura.png',
+        pedra : 'PERDEU',
+        papel : 'GANHOU',
+        tesoura : 'EMPATE'
+    }
 }
