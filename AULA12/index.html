@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Criação de elementos</title>
+    <style>
+        .vermelha{
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Criação de elementos</h1>
+
+    <div id="minhaDiv">
+
+    </div>
+
+    <script>
+        // Criação de um elemento <p>
+        let paragrafo = document.createElement('p')
+        // <p></p>
+
+        // adicionar conteúdo
+        paragrafo.innerHTML = 'sou um parágrafo criado pelo javascript'
+
+        //seleção do elemento pai
+        let minhaDiv = document.getElementById('minhaDiv')
+
+        // adicionar filho
+        //elementoPai.appendChild(elementoFilho)
+        minhaDiv.appendChild(paragrafo)
+
+    </script>
+    
+</body>
+</html>
