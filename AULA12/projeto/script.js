@@ -1,4 +1,4 @@
-//SELEÇÃO DOS ELEMENTOS QUE SERÃO MANIPULADOS
+//1 - SELEÇÃO DOS ELEMENTOS QUE SERÃO MANIPULADOS
 // selecionar os parágrafos de pontuação
 let pontosComputador = document.getElementById('pontosComputador')
 let pontosUsuario = document.getElementById('pontosUsuario')
@@ -40,3 +40,44 @@ const opcoes= {
         tesoura : 'EMPATE'
     }
 }
+
+// 3 -  DEFINIÇÃO DAS VARIÁVEIS GLOBAIS QUE SERÃO UTILIZADAS PARA ARMAZENAR AS ESCOLHAS E OS PONTOS DOS JOGADORES
+
+let jogadaComputador = {}
+let jogadaUsuario = {}
+
+let qtdPontosComputador = 0
+let qtdPontosUsuario = 0
+
+// 4 - DEFINIÇÃO DAS FUNCIONALIDADES DO JOGO
+
+// 4.1 montar as jogadas
+function montarJogada(numeroJogador){
+    // utilizar a interface Math com o método randon para criar um número entre 1 e 3 para a jogada do computador
+    // numero decimal random 
+    let numComputador = (Math.random()*3)+1
+    // converter o numero decimal para inteiro
+    numComputador = Math.floor(numComputador)
+    
+    jogadaComputador = opcoes[numComputador]
+    jogadaUsuario = opcoes[numeroJogador]
+}
+
+
+// 4.2 definir o ganhador
+function definirGanhador(){
+    // avaliar as jogadas , definir o ganhador e adicionar o ponto ao placar
+
+    if('GANHOU'){
+
+    }
+    else if ('PERDEU'){
+
+    }
+
+}
+
+
+// 4.3 montar a tela
+
+// 4.4 jogar
