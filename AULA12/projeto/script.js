@@ -63,21 +63,64 @@ function montarJogada(numeroJogador){
     jogadaUsuario = opcoes[numeroJogador]
 }
 
+// montarJogada(1)
 
 // 4.2 definir o ganhador
 function definirGanhador(){
     // avaliar as jogadas , definir o ganhador e adicionar o ponto ao placar
 
-    if('GANHOU'){
+    if(jogadaUsuario[jogadaComputador.nome]== 'GANHOU'){ 
+        qtdPontosUsuario+=1
 
     }
-    else if ('PERDEU'){
-
+    else if (jogadaUsuario[jogadaComputador.nome]=='PERDEU'){ 
+        qtdPontosComputador+=1
     }
 
 }
 
 
 // 4.3 montar a tela
+function montarTela(){
+
+let imagemJogador = document.createElement('img')
+let imagemComputador = document.createElement('img')
+// alterar as propriedades
+imagemJogador.src = jogadaUsuario.imagem
+imagemComputador.src = jogadaComputador.imagem
+imagemJogador.alt = jogadaUsuario.nome
+imagemComputador.alt = jogadaComputador.nome
+
+let textoJogador = document.createElement('p')
+let textoComputador = document.createElement('p')
+
+textoJogador.innerHTML = jogadaUsuario.nome
+textoComputador.innerHTML = jogadaComputador.nome
+
+
+// adicionar os elementos na tela (ao pai)
+escolhaUsuario.appendChild(textoJogador)
+escolhaUsuario.appendChild(imagemJogador)
+
+escolhaComputador.appendChild(textoComputador)
+escolhaComputador.appendChild(imagemComputador)
+
+// atualização do campo que mostra o resultado
+resultado.innerHTML = jogadaUsuario[jogadaComputador.nome]
+
+// atualização do placar
+pontosComputador.innerHTML = qtdPontosComputador
+pontosUsuario.innerHTML = qtdPontosUsuario
+
+}
 
 // 4.4 jogar
+function jogar(numeroDaJogadaDoUsuario){
+    // montar a invocação das funções necessárias para o jogo
+}
+
+
+// 5 - ADICIONANDO EVENTOS AOS BOTOES
+pedra.addEventListener('click',()=> jogar(1))
+papel.addEventListener('click',()=> jogar(2))
+tesoura.addEventListener('click',()=> jogar(3))
