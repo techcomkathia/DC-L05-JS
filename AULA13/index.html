@@ -9,34 +9,38 @@
     <h1>Consumo API</h1>
 
     <img src="" alt="" id="gatinho">
+    <br>
+    <button id="btn">Clique aqui para um novo gatinho</button>
 
-    <button>Clique aqui para um novo gatinho</button>
-
-    <script>
-
-        // 1ª consumir a api thecatapi e mostrar o objeto no console
-
-        // 2ª além de mostrar no console, você deverá adicionar a imagem no HTML
-        
-
-
-        // ----------
-        // selecionar o elemento do html que será manipulado (imagem)
+    <script>   
         let imagem = document.getElementById('gatinho')
-        // retornar uma promise
-        fetch('https://api.thecatapi.com/v1/images/search')
-        .then((resposta) => resposta.json())
-        .then((arrayObjetos) => {
-            console.log(arrayObjetos)
-            return arrayObjetos[0]
-        })
-        .then((objeto) => {
-            let url = objeto.url
-            imagem = document.getElementById('gatinho')
-            imagem.src = url
-            imagem.width= 800
-        })
-        .catch((erro) => console.log('deu ruim'))
+        let btn = document.getElementById('btn')
+
+        // criar uma função para mostrar o gatinho
+        function mostrarGatinho() {
+            fetch('https://api.thecatape.com/v1/images/search')
+            // fazer a conversão de JSON para objeto
+            .then((resposta) => resposta.json())
+            .then((arrayObjetos) => {
+                // métodolo log do console não retorna nada
+                console.log('sou assíncrono e fui executado depois')
+                console.log(arrayObjetos)
+                return arrayObjetos[0]
+            })
+            .then((objeto) => {
+                let url = objeto.url
+                imagem = document.getElementById('gatinho')
+                imagem.src = url
+                imagem.width= 800
+            })
+            .catch((erro) => console.log('deu ruim'))
+
+
+            console.log( 'sou sincrono e fui executado primeiro mesmo sendo invocado depois da promisse') 
+        }
+             
+
+        btn.addEventListener('click', mostrarGatinho)
 
 
 

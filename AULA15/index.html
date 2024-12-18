@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Funções assíncronas </title>
+</head>
+<body>
+    <script src="script.js"></script>
+
+
+    <!-- <script>
+
+         
+       /*
+        fetch('https://viacep.com.br/ws/61944620/json/')
+            .then((response) => response.json())
+            .then((dados)=> console.log(dados))
+            .catch((erro) => console.log(erro))
+        
+        console.log('sou sincrono e fui executado primeiro mesmo sendo invocado depois da promisse')
+        */
+
+        async function pegarBairro() { 
+            let bairro = ''   
+            try{
+                // todo código que pode ocasionar erro
+                let retornoApi = await fetch('https://viacep.com.br/ws/61944620/json/')
+                let dados = await retornoApi.json()
+                console.log (dados.cep)
+                bairro = dados.bairro
+                return bairro
+            }
+            catch(erro){
+                // tratamento de erro
+                console.log(erro.message)
+                console.log('deu ruim')
+            }
+
+        }
+
+        //faça uma função que busque o array de usuários e retorne ele, no seguinte formato 
+
+        /* {
+             qtdUsuarios: num,
+             usuarios: [ {}, {}, {} ],
+             resultadoDaBusca: 'sucesso'
+         }
+
+        }*/
+
+
+
+
+
+
+        async function mostrarBairro() {
+            let bairro = await pegarBairro()
+
+            console.log(bairro)
+        }
+
+        mostrarBairro()
+
+
+        pegarBairro().then((bairro)=> console.log(bairro))
+
+        console.log('sou sincrono e fui executado primeiro mesmo sendo invocado depois da promisse')
+
+        
+
+
+        
+
+        
+
+        
+
+
+
+
+
+
+
+    </script> -->
+    
+</body>
+</html>
