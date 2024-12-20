@@ -47,5 +47,62 @@ async function cadastrarProduto() {
 
 }
 
-btnCadastrar.addEventListener('click', cadastrarProduto)
+function atualizarTotal(){
+    let id = inputId.value
+    let produto = {
+        title: inputNome.value,
+        price: inputPreco.value,
+        description: inputDescricao.value,
+        image: inputUrlImagem.value,
+        category: inputCategoria.value
+    }
 
+    fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: 'PUT',
+        body: JSON.stringify(produto)
+    })
+    .then((resposta) => resposta.json()) //capta a resposta e converte para objeto
+    .then((objeto) => console.log(objeto))
+    .catch((erro) => console.log(erro.message))
+
+
+}
+
+btnCadastrar.addEventListener('click', cadastrarProduto)
+btnAtualizarTotal.addEventListener('click', atualizarTotal)
+
+function atualizarParcial(){
+    let id= inputId.value
+    let produto={}
+
+    if(inputNome.value != ""){
+        produto.title = inputNome.value
+    }
+    if(inputPreco.value != ""){
+        produto.price = inputPreco.value
+    }
+    if(inputDescricao.value != ""){
+        produto.description = inputDescricao.value
+    }
+    if(inputUrlImagem.value != ""){
+        produto.image = inputUrlImagem.value
+    }
+    if(inputCategoria.value != ""){
+        produto.category = inputCategoria.value
+    }
+
+    fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: 'PATCH',
+        body: JSON.stringify(produto)
+    })
+    .then((resposta) => resposta.json()) //capta a resposta e converte para objeto
+    .then((objeto) => console.log(objeto))
+    .catch((erro) => console.log(erro.message))
+
+}
+
+btnAtualizarParcial.addEventListener('click', atualizarParcial)
+
+function apagar(){
+
+}
