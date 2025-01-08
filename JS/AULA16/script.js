@@ -104,5 +104,15 @@ function atualizarParcial(){
 btnAtualizarParcial.addEventListener('click', atualizarParcial)
 
 function apagar(){
+    let id = inputId.value
+
+    fetch(`https://fakestoreapi.com/products/${id}`, {
+        method: 'DELETE'
+    })
+    .then((resposta) => resposta.json()) //capta a resposta e converte para objeto
+    .then((objeto) => console.log(objeto))
+    .catch((erro) => console.log(erro.message))
 
 }
+
+btnApagar.addEventListener('click', apagar)
