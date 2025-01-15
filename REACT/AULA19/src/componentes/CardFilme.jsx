@@ -4,16 +4,24 @@
 // - O **título** do filme;
 // - Dois **links** relacionados.
 
+// https://getbootstrap.com/docs/5.2/components/card/
+
 
 function CardFilme({ id, imagem, titulo, sinopse, assistir }) {
+
+
     return(
-        <div id={id}>
-            <img src={imagem} alt={titulo}/>
-            <h1>{titulo}</h1>
-            <a href={sinopse}>Resumo Filme</a>
-            <br/>
-            <a href={assistir}>Assistir Aqui</a>
+
+        <div className="card" style={{width: '18rem'}} id={id}>
+            <img src={imagem} className="card-img-top" alt={titulo}/>
+            <div className="card-body">
+                <h5 className="card-title">{titulo}</h5>
+                
+                <a href={sinopse} className="btn btn-primary">Resumo Filme </a>
+                <a href={assistir} className="btn btn-primary">Assistir Aqui</a>
+            </div>
         </div>
+
     )
 }
 

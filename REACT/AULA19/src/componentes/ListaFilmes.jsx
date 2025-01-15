@@ -1,7 +1,6 @@
 import CardFilme from "./CardFilme";
-
-// ### Componente `ListaFilme.js`
-// O componente `ListaFilme` será responsável por renderizar uma lista de filmes. Ele receberá um **array de objetos** como prop, onde cada objeto representará um filme. Utilizando um loop, o componente iterará pelo array para criar dinamicamente múltiplos componentes `CardFilme`, garantindo uma exibição organizada da lista de filmes.
+/* ### Componente `ListaFilme.js`
+/ O componente `ListaFilme` será responsável por renderizar uma lista de filmes. Ele receberá um **array de objetos** como prop, onde cada objeto representará um filme. Utilizando um loop, o componente iterará pelo array para criar dinamicamente múltiplos componentes `CardFilme`, garantindo uma exibição organizada da lista de filmes.*/
 function ListaFilmes(props) {
     let filmes = props.filmes // [{...}, {...}, {...}]
     /* 
@@ -13,7 +12,6 @@ function ListaFilmes(props) {
         assistir:'link2Filme'
     }
     */
-
     return (
         <div>
             {filmes.map((filme)=>{
