@@ -13,7 +13,7 @@ function ListaFilmes(props) {
     }
     */
     return (
-        <div>
+        <div className=" d-flex flex-wrap justify-content-center ">
             {filmes.map((filme)=>{
                 return ( 
                     <CardFilme 
