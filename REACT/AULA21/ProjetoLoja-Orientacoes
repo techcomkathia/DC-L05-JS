@@ -1,0 +1,28 @@
+Objetivo da aula : criação de uma aplicação em React para uma loja virtual. 
+- Serão mostrados os produtos já cadastrados
+- Poderá ser feita uma busca por um produto específico (id) 
+- Poderão ser cadastrados usuários para a loja.
+
+Passo a Passo para a execução
+
+- Criação do Repositório no GitHub
+- Clonagem do repositório (remoto) para o local de trabalho (Desktop)
+
+1 - Criação do projeto com Vite
+
+2 - Configurar o uso do Bootstrap 5 (CDN)
+
+3 - Criação da estrutura de pastas (Componentes)
+
+4 - Criação dos componentes
+4.1
+4.2 
+
+5 - Requisição da lista de produtos (API)
+
+6 - Renderização das informações dos produtos
+
+
+
+
+
