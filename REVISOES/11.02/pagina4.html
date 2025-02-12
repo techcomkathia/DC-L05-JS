@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>Atividade 4</h1>
+
+    <p>Para a lista não ordenada abaixo, adicione 5 itens a lista de compras. Esses itens serão pedidos ao usuário, inserido em um array e depois adicionados na lista(li), como filhos da tag ul </p>
+
+    <ul id="listaDeCompras">
+
+    </ul>
+
+    <script>
+        //criar uma variável que armazene um array vazio
+        let compras = []
+        let qtdItens = 5
+
+        // adicionar os itens ao array
+        for(let i=1; i<=qtdItens; i++){
+            let item = prompt(`Digite o ${i}º item`)
+            compras.push(item)
+            console.log(compras)
+        }
+
+        function inserirNaLista(item){
+            // 1º buscar o elemento pai
+            let listaPai = document.querySelector('#listaDeCompras') //um elemento
+
+            //2º criar o elemento filho
+            let itemLista = document.createElement('li')
+
+            //3º adicionar o texto ao filho
+            itemLista.innerHTML = item
+
+            //4º adicionar o filho ao pai
+            listaPai.appendChild(itemLista)
+        }
+
+        compras.forEach(inserirNaLista)
+
+        /* compras.forEach((item)=> {
+            // 1º buscar o elemento pai
+            let listaPai = document.querySelector('#listaDeCompras') //um elemento
+
+            //2º criar o elemento filho
+            let itemLista = document.createElement('li')
+
+            //3º adicionar o texto ao filho
+            itemLista.innerHTML = item
+
+            //4º adicionar o filho ao pai
+            listaPai.appendChild(itemLista)
+        })
+        */
+    </script>
+    
+</body>
+</html>

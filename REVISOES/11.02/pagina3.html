@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .vermelho {           
+            color:red;
+        }
+
+        .azul {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Atividade 3</h1>
+
+    <p class="atividade">Selecione o parágrafo com a classe 'vermelho' e altere a classe para 'azul'. Necesse processo você irá remover uma classe e adicionar uma nova</p>
+
+    <p class=" atividade vermelho">Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui, hic!</p>
+
+    <script>
+        let atividade = document.getElementsByClassName('atividade') //html collection
+
+        // remoção da classe vermelho
+        atividade[1].classList.remove('vermelho')
+        console.log(atividade) // todos os elementos com classe atividade
+        console.log(atividade[1]) // o parágrafo com a classe atividade, sem a classe vermelho, que foi removida
+
+        //adicionar a classe azul
+        atividade[1].classList.add('azul')       
+
+
+    </script>
+    
+</body>
+</html>

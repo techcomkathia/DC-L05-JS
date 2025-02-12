@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        let documento = document.getElementsByTagName('body')[0]
+
+        console.log(documento)
+
+        // em um documento do html vazio, peça ao usuário um título e um texto. Armazene em um array chamado conteúdo. 
+        // com os elementos do array conteúdo, insira uma tag h1 com o título e uma tag p com o texto no body do documento.
+
+        let titulo = prompt('digite um título')
+        let texto = prompt('digite um texto')
+        let conteudo = [titulo, texto]
+        console.log(conteudo)
+
+        documento = document.getElementsByTagName('body')[0]
+        corpoPagina.innerHTML = `<h1>${conteudo[0]}</h1>\n<p>${conteudo[1]}</p>`
+    </script>
+    
+</body>
+</html>
