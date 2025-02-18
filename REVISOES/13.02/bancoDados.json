@@ -1,0 +1,116 @@
+{
+  "usuarios": [
+    {
+      "id": "3",
+      "nome": "Astrogildo",
+      "email": "astrogildo@gatinho.com",
+      "senha": "novaSenha",
+      "saldo": 10
+    },
+    {
+      "id": 100,
+      "nome": "cleitinho",
+      "email": "joao@joao",
+      "senha": "123456"
+    },
+    {
+      "id": 100,
+      "nome": "cleitinho",
+      "email": "joao@joao",
+      "senha": "123456"
+    },
+    {
+      "id": 100,
+      "nome": "cleitinho",
+      "email": "joao@joao",
+      "senha": "123456"
+    },
+    {
+      "id": "fde4"
+    },
+    {
+      "id": "13e4"
+    },
+    {
+      "id": "64ec"
+    }
+  ],
+  "contas": [
+    {
+      "id": "1",
+      "agencia": 1234,
+      "conta": 12345,
+      "saldo": 1000
+    },
+    {
+      "id": "2",
+      "agencia": 1234,
+      "conta": 12346,
+      "saldo": 1000
+    },
+    {
+      "id": "3",
+      "agencia": 1234,
+      "conta": 12347,
+      "saldo": 1000
+    },
+    {
+      "id": "4",
+      "agencia": 1234,
+      "conta": 12348,
+      "saldo": 1000
+    }
+  ],
+  "produtos": [
+    {
+      "id": "1",
+      "nome": "teclado",
+      "preco": 150.8,
+      "quantidade": 10
+    },
+    {
+      "id": "2",
+      "nome": "mouse",
+      "preco": 150.8,
+      "quantidade": 10
+    },
+    {
+      "id": "3",
+      "nome": "monitor",
+      "preco": 150.8,
+      "quantidade": 10
+    },
+    {
+      "id": "4",
+      "nome": "headset",
+      "preco": 150.8,
+      "quantidade": 10
+    }
+  ],
+  "bichinhos": [
+    {
+      "id": "1",
+      "nome": "cachorro",
+      "idade": 10,
+      "peso": 10
+    },
+    {
+      "id": "2",
+      "nome": "gato",
+      "idade": 10,
+      "peso": 10
+    },
+    {
+      "id": "3",
+      "nome": "peixe",
+      "idade": 10,
+      "peso": 10
+    },
+    {
+      "id": "4",
+      "nome": "hamster",
+      "idade": 10,
+      "peso": 10
+    }
+  ]
+}
