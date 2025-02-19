@@ -1,22 +1,23 @@
 import {Routes, Route} from 'react-router-dom'
-// npm install react-router-dom
 
-// importação das páginas que serão renderizadas
 import Home from '../paginas/Home'
+import SobreNos from '../paginas/SobreNos'
+import Contato from '../paginas/Contato'
 import Pagina2 from '../paginas/Pagina2'
 import PaginaNaoEncontrada from '../paginas/PaginaNaoEncontrada'
 
-
-// configuração das rotas em um componente especifico
-
 function Rotas(){
+
     return(
         <Routes>
-            <Route element={<Home/>}  path='/' />
-            <Route element={<Pagina2/>} path='/pagina2'/>
-            <Route element={<PaginaNaoEncontrada/>} path='*'></Route>
+            <Route path='/' element={<Home/>} exact/>
+            <Route path='/sobrenos' element={<SobreNos/>}/>
+            <Route path='/pagina2' element={<Pagina2/>}/>
+            <Route path='/contato' element={<Contato/>}/>
+            <Route path='*' element={<PaginaNaoEncontrada/>}/>
         </Routes>
     )
+
 }
 
 export default Rotas

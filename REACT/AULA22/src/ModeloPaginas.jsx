@@ -1,6 +1,6 @@
 import Rotas from "./rotas/Rotas"
 
-import {BrowserRouter} from 'react-router-dom'
+import {BrowserRouter, Link} from 'react-router-dom'
 
 
 
@@ -12,6 +12,16 @@ function ModeloPaginas(){
         <BrowserRouter>
             <header style={{backgroundColor: 'darkblue', color: 'white'}}>
                 <h6>Cabeçalho</h6>
+
+                <nav>
+                    <ul>
+                        <li> <Link to="/">Home</Link></li>
+                        <li> <Link to="/sobrenos">Sobre Nós</Link></li>
+                        <li> <Link to="/pagina2">Pagina 2</Link></li>
+                        <li> <Link to="/contato">Contato</Link></li>
+                    </ul>
+                </nav>
+
             </header>
 
             {/* TODAS AS PÁGINAS PRESENTES NO ARQUIVO DE ROTAS */}
