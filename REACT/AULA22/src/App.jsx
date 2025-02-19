@@ -1,35 +1,48 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
+import BotaoContagem from './componentes/BotaoContagem'
+import CardComProps from './componentes/CardComProps'
+import ComponenteCor from './componentes/ComponenteCor'
+import CardUsuario from './componentes/CardUsuario'
+import ModeloPaginas from './ModeloPaginas'
 
-  return (
+
+// function App() {
+
+//   let dataVariavel = '20.12.2052'
+//   return (
+//     <>
+//       <h1>Vite + React</h1>
+//       <p>Aula 22 será uma revisão dos conceitos iniciais de React. No segundo momento iremos aprender a usar o React Router DOM</p>
+
+//       <BotaoContagem/>
+//       <BotaoContagem/>
+
+//       <CardComProps/> {/*Componente que não recebe props não renderiza as informações*/}
+//       <CardComProps titulo="Testando um componente com props" data={dataVariavel} descricao="Teste de componente com propriedades e sua renderização"/>
+
+//       <ComponenteCor cor="pink"/>
+//       <ComponenteCor cor="blue"/>
+
+//       <CardUsuario nome={'Cleitinho'} idade={20} email={'cleitinho@email'} corBorda={'blue'} tamanhoFonte={'10px'}/>
+  
+//     </>
+//   )
+// }
+
+function App() {
+
+  return(
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+      <ModeloPaginas/>
     </>
+
+    // crie 3 páginas ( home, sobre nós e contato)
+    // crie um arquivo de rotas para confifguração das rotas com elemento e path 
+    //adicione as rotas no ModeloSite que terá cabeçalho e rodapé.
+    //insira o modeloSite no App.jsx
   )
+
 }
 
 export default App
