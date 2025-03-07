@@ -62,3 +62,74 @@ alter table alunos drop column telefone;
 -- 5. Renomeie a coluna especialidade da tabela Professores para area_atuacao.
 alter table professores change especialidade  area_atuacao varchar(50) not null;
 alter table professores modify area_atuacao varchar(51) not null;
+
+/*INSERT INTO nome_da_tabela (coluna1, coluna2)
+VALUES (valor1, valor2);*/
+
+
+/*6. Adicione 3 alunos na tabela Alunos. (chaves primárias)
+João Silva, 2005-05-10, joao@email.com
+Maria Oliveira, 2006-08-22, maria@email.com
+Pedro Santos, 2007-12-15, pedro@email.com*/
+
+
+insert into alunos (nome, data_nascimento, email)
+values 
+('João Silva', '2005-05-10', 'joao@email.com'),
+('Maria Oliveira', '2006-08-22', 'maria@email.com'),
+('Pedro Santos', '2007-12-15', 'pedro@email.com');
+
+select *  from alunos;
+
+/*7. Insira 2 professores na tabela Professores.(chaves primárias)
+Carlos Andrade, Matemática
+Ana Paula, História*/
+insert into professores (nome, area_atuacao)
+values
+('Carlos Andrade', 'Matemática'),
+('Ana Paula', 'História');
+
+select *  from professores;
+
+/*8. Adicione 2 disciplinas na tabela Disciplinas, associando aos professores recém-inseridos.
+Matemática Básica, lecionada por Carlos Andrade (usar ref de id)
+História do Brasil, lecionada por Ana Paula (usar ref de id)*/
+insert into disciplinas (nome, id_professor) values
+('Matemática Básica', 1),
+('História do Brasil', 2);
+
+-- tentando fazer um insert para um id de professor que não existe
+ insert into disciplinas (nome, id_professor) values
+ ('disciplina exemplo', 999);
+
+-- adicionar a coluna data_matricula na tabela matrículas 
+alter table matriculas add data_matricula date not null;
+
+/*9. Matricule os alunos nas disciplinas usando a tabela Matriculas.
+João Silva em Matemática Básica, 2024-10-10 (usar ref de id)
+Maria Oliveira em História do Brasil, 2024-10-11 (usar ref de id)
+Pedro Santos em Matemática Básica, 2024-10-12 (usar ref de id)*/
+insert into Matriculas (id_aluno, id_disciplina, data_matricula)
+values
+(1, 1, '2024-10-10'),
+(2, 2, '2024-10-11'),
+(3, 1, '2024-10-12');
+
+-- ATUALIZAÇÃO DE DADOS (UPDATE)
+-- 10.  Atualize o email do aluno 'Pedro Santos' para pedro.santos@email.com. 
+update alunos set email = 'pedroNOVO.santos@email.com' where id = 3;
+select * from alunos;
+
+-- 11. Modifique a especialidade do professor 'Carlos Andrade' para Física.
+update Professores set area_atuacao = 'Física' where id = 1;
+select * from professores;
+
+-- 12. Mude a data de matrícula de 'Maria Oliveira' para 2024-11-01, e a disciplina para Matemática básica
+update matriculas set data_matricula = '2024-11-01', id_disciplina = 1 where id=2;
+select * from matriculas;
+
+
+-- DELEÇÃO DE DADOS DENTRO DA TABELA 
+delete from matriculas where id_aluno = 2;
+
+
