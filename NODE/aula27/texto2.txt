@@ -1,0 +1,5 @@
+Rua: Rua 2 
+Numero: 200 
+Cidade: Cidade 2 
+Estado: Estado 2 
+CEP: 2222222 

@@ -103,3 +103,49 @@ INSERT INTO emprestimos (idCliente, idLivro, dataEmprestimo, dataDevolucao) VALU
 (7, 5, '2024-03-17', NULL),
 (9, 6, '2024-03-19', NULL),
 (10, 7, '2024-03-20', '2024-03-30');
+
+
+
+-- REVISÃO DML 
+-- Insira mais 6 livros ( caso seja necessário, adicione autores também)
+-- Insira mais 3 clientes
+-- Atualize o empréstimo de Id 4 para a data de devolução '2024-02-12'
+
+
+
+
+
+
+
+
+
+
+
+-- DQL
+-- 1) SELECT 
+-- Listar todos os livros disponíveis na biblioteca
+-- Exibir todos os clientes da cidade de Fortaleza
+-- Listar todos os empréstimos ainda não devolvidos
+
+-- 2) SELECT COM ORDENÇÃO / LIMITAÇÃO
+-- Mostrar os clientes mais jovens
+-- Listar os livros por ordem alfabética
+-- Listar os 3 clientes mais velhos
+-- Listar os livros com preços abaixo de 50 e ordenados por título
+-- Listar os 50 livros do mais barato ao mais caro
+
+-- 3) SELECT COM AGRUPAMENTO
+-- Exibir o número de clientes em cada cidade
+-- Contar quantos livros de cada autor existem na biblioteca
+-- Contar o número de empréstimos por livro
+-- Contar o número de empréstimos por cliente
+
+
+
+
+
+
+
+
+
+

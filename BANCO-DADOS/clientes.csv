@@ -1,0 +1,11 @@
+idCliente,nome,cpf,dataNascimento,cidade
+1,"Ana Souza",123.456.789-01,1992-03-10,Fortaleza
+2,"Carlos Silva",234.567.890-12,1985-08-22,Fortaleza
+3,"Mariana Oliveira",345.678.901-23,1990-11-05,Eusébio
+4,"Pedro Lima",456.789.012-34,2000-05-15,Caucaia
+5,"João Ferreira",567.890.123-45,1998-12-30,Fortaleza
+6,"Larissa Costa",678.901.234-56,1987-09-18,Eusébio
+7,"Ricardo Mendes",789.012.345-67,1995-04-22,Caucaia
+8,"Fernanda Alves",890.123.456-78,1982-07-10,Fortaleza
+9,"Tiago Moreira",901.234.567-89,1993-01-25,Eusébio
+10,"Beatriz Nunes",012.345.678-90,2001-06-14,Caucaia
