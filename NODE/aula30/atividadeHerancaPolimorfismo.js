@@ -76,3 +76,58 @@ Gerente: recebe um bônus de 20%.
 Nas subclasses o método exibir informações deverá mostrar o nome, o cargo e o salário final do funcionário.
 
 Crie 5 instâncias dessas classes, totalizando 10 funcionários e em loop mostre a informação de todos eles.   */
+
+class Funcionario {
+    #salarioBase
+    constructor(nome, cargo, salarioBase){
+        this.nome = nome
+        this.cargo = cargo
+        this.#salarioBase = salarioBase
+    }
+
+    getSalario(){
+        return this.#salarioBase
+    }
+
+    exibirInformacoes(){
+        console.log(`nome: ${this.nome}, cargo: ${this.cargo}, salario: ${this.#salarioBase}`)
+    }
+}
+
+class Vendedor extends Funcionario{
+    constructor(nome, cargo, salarioBase){
+        super(nome, cargo, salarioBase)
+    }
+
+    exibirInformacoes(){
+        let salarioFinal = super.getSalario() * 1.10
+        console.log(`nome: ${this.nome}, cargo: ${this.cargo}, salario base:${super.getSalario()} , salario final: ${salarioFinal}`)
+
+    }
+}
+
+class Gerente extends Funcionario{
+    constructor(nome, cargo, salarioBase){
+        super(nome, cargo, salarioBase)
+    }
+
+    exibirInformacoes(){
+        let salarioFinal = super.getSalario() * 1.20
+        console.log(`nome: ${this.nome}, cargo: ${this.cargo}, salario base:${super.getSalario()} , salario final: ${salarioFinal}`)
+    }
+}
+
+let vendedor1 = new Vendedor('joão', 'vendedor', 5000)
+let vendedor2 = new Vendedor('maria', 'vendedor', 5000)
+let vendedor3 = new Vendedor('pedro', 'vendedor', 5000)
+let vendedor4 = new Vendedor('jose', 'vendedor', 5000)
+let vendedor5 = new Vendedor('joaquim', 'vendedor', 5000)
+let gerente1 = new Gerente('joão', 'gerente', 10000)
+let gerente2 = new Gerente('maria', 'gerente', 10000)
+let gerente3 = new Gerente('pedro', 'gerente', 10000)
+let gerente4 = new Gerente('jose', 'gerente', 10000)
+let funcionario5 = new Funcionario('joaquim', 'atendente', 10000)
+
+let funcionarios = [vendedor1, vendedor2, vendedor3, vendedor4, vendedor5, gerente1, gerente2, gerente3, gerente4, funcionario5]
+
+funcionarios.forEach(funcionario => funcionario.exibirInformacoes())
