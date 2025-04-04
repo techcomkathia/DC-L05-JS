@@ -163,7 +163,26 @@ app.get('/livros', (req, res) => {
     
 })
 //POST - criar um novo livro
+app.post('/livros', (req, res) => {
+    let novoLivro = req.body || {}
 
+    if( !novoLivro.titulo || !novoLivro.autor || !novoLivro.ano || !novoLivro.preco || !novoLivro.quantidade || !novoLivro.sinopse || !novoLivro.nota){
+        res.status(400)
+        res.json({error: 'Campos obrigatórios não informados', infosObrigatorias: ['titulo','autor','ano','preco','quantidade','sinopse','nota'], infosEnviadas: novoLivro})
+    }
+    else if(novoLivro.titulo == '' || novoLivro.autor == '' || novoLivro.ano == '' || novoLivro.preco == '' || novoLivro.quantidade == '' || novoLivro.sinopse == '' || novoLivro.nota == ''){
+        res.status(400)
+        res.json({error: 'Todos os campos devem ser preenchidos', infosObrigatorias: ['titulo','autor','ano','preco','quantidade','sinopse','nota'],infosEnviadas: novoLivro})
+    }
+    else{
+        //correção do id do novo livro
+        novoLivro.id = livros[livros.length-1].id + 1
+        //adicionar o livro no final da lista de livros
+        livros.push(novoLivro)
+        res.status(200)
+        res.json({livroAdicionado:novoLivro, qtdLivros:livros.length, mensagem: 'Livro adicionado com sucesso'})
+    }
+})
 
 /* ROTA PARA CLIENTES*/
 // GET - todos os clientes
@@ -175,7 +194,6 @@ app.get('/clientes', (req, res) => {
 // POST - cadastrar um novo cliente
 app.post('/clientes', (req, res) => {
     let novoCliente = req.body || {}
-   
     // verificação de erro
     // caso algum campo nao seja preenchido
     if(!novoCliente.nome || !novoCliente.email || !novoCliente.senha || novoCliente.nome == '' || novoCliente.email == '' || novoCliente.senha == '') {
