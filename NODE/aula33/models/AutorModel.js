@@ -13,11 +13,11 @@ const Autor = sequelize.define(
             autoIncrement: true
         },
         nome:{
-            type: DataTypes.STRING,
+            type: DataTypes.STRING(100),
             allowNull: false
         },
         nacionalidade:{
-            type: DataTypes.STRING
+            type: DataTypes.STRING(50)
         }    
     }
 )
