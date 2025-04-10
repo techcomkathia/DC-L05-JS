@@ -1,4 +1,4 @@
-const sequelize = require('./Banco')
+const sequelize = require('../Banco')
 const { DataTypes } = require('sequelize')
 
 
