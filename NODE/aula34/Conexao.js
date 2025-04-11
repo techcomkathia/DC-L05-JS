@@ -4,7 +4,8 @@ const sequelize = require('./Banco')
 const Fornecedor = require('./modelos/FornecedorModel')
 const Produto = require('./modelos/ProdutosModel')
 
-sequelize.authenticate()// met. assíncrono que realiza a conexão com o banco
+const conexao = () => {
+    sequelize.authenticate()// met. assíncrono que realiza a conexão com o banco
     .then(() => {
         console.log('sucesso ao conectar ao banco')  
     })
@@ -14,4 +15,12 @@ sequelize.authenticate()// met. assíncrono que realiza a conexão com o banco
         //sequelize.sync({alter: true}) // para alterar as tabelas caso seja necessário
         console.log('Tabelas sincronizadas com sucesso')
     })
-    .catch(err => console.log('Não foi possível conectar ao banco', err)) 
+    .catch(err => console.log('Não foi possível conectar ao banco', err))
+}
+
+conexao()  
+
+
+//criação de um fornecedor
+// criação de um produto e vinculando-o ao fornecedor
+module.exports = conexao
