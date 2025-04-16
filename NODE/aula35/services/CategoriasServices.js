@@ -27,6 +27,67 @@ function getCategorias(req, res) {
 }
 
 
+function postCategorias(req, res) {
+    //nome, descricao
+    const {nome, descricao} = req.body
+
+    //verificar se a categoria existe
+    CategoriasModel.findOne({where:{nome:nome}})
+        .then(categoria => {
+            if(categoria){
+                return res.json({
+                    status: 400,
+                    message: 'Categoria ja cadastrada'
+                })
+            }
+            else{
+               CategoriasModel.create({nome:nome, descricao:descricao})
+                .then(categoria => {
+                    res.json({
+                        status: 200,
+                        dados: categoria
+                    })
+                })
+
+            }
+        }).catch(erro => {
+            res.json({
+                status: 500,
+                message: erro
+            })
+        })
+}
+
+async function postCategoria2 (req, res) {
+        const{nome, descricao} = req.body // desestruturando o body da requisição
+    
+    try{
+
+        //verificar se a categoria existe
+        const categoriaPesquisa = await CategoriasModel.findOne({where:{nome:nome}})
+
+        if(categoriaPesquisa){
+            //se a categoria existir retorna uma mensagem de erro
+            return res.json({
+                status: 400,
+                message: 'Categoria ja cadastrada'
+            })
+        } 
+
+        //caso o código não tenha sido retornado acima, significa que a categoria ainda nao foi cadastrada
+        //entao cria uma nova categoria
+        const categoriaCriada= await CategoriasModel.create({nome:nome, descricao:descricao})
+
+        res.json({
+            status: 200,
+            dadosCriados: categoriaCriada
+        })
+
+    }
+    catch(erro){}
+    
+}
+
 module.exports = {
     getCategorias
 }
