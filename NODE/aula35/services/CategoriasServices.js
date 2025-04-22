@@ -1,7 +1,7 @@
 // todas as regras de negócio
 // criação de uma categoria, listagem das categorias, edição de uma categoria, exclusão de uma categoria
 
-const CategoriasModel = require('../models/CategoriasModel') // importando o modelo de categorias
+const CategoriasModel = require('../models/CategoriaModel') // importando o modelo de categorias
 const express = require('express')
 const app = express()
 
