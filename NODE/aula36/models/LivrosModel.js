@@ -1,4 +1,4 @@
-const sequelize = require('./banco') // importando o sequelize do arquivo conexaoBanco.js
+const sequelize = require('../banco') // importando o sequelize do arquivo conexaoBanco.js
 const { DataTypes } = require('sequelize')
 const Autor = require('./AutorModel')
 const Categoria = require('./CategoriaModel')

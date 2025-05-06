@@ -1,5 +1,6 @@
 const express= require('express')
 const rotasCategorias = require('./routes/CategoriasRotas')
+const rotasLivros = require('./routes/LivrosRotas')
 const conectarBanco = require('./conexaoBanco')
 
 const app = express()
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 app.use('/categorias', rotasCategorias)
 
 //rotas de livros
+app.use('/livros', rotasLivros)
 //rotas de autores
 //rotas de usuarios
 

@@ -1,10 +1,10 @@
 const express = require('express')
 const rotas = express.Router()
 //controladores 
-const CategoriaController = require('../controller/CategoriaController')
+const CategoriasController = require('../controller/CategoriasController')
 
 //buscarTodasCategorias
-rotas.get('/', CategoriaController.getCategorias)
+rotas.get('/', CategoriasController.getCategorias)
 
 //exportando as rotas
 module.exports = rotas
